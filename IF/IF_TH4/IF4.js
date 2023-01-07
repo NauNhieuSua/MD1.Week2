@@ -27,11 +27,13 @@
 //             break
 //     }
 
-let giatri = +prompt("Nhap gia tri")
-if(giatri>0){
-    alert(1);
-} else if (giatri==0) {
-    alert(0)
-}else {
-    alert(-1)
-}
+// let giatri = +prompt("Nhap gia tri")
+// if(giatri>0){
+//     alert(1);
+// } else if (giatri==0) {
+//     alert(0)
+// }else {
+//     alert(-1)
+// }
+
+// let giatri = prompt(" Nhap gia tri")
