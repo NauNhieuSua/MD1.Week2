@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<input type="text" id="num1" placeholder="Nhập số thứ 1">
+<input type="text" id="num2" placeholder="Nhập số thứ 2"> <br><br>
+<button onclick="Cong()">Cộng</button>
+<button onclick="tru()">Trừ</button>
+<button onclick="nhan()">Nhân</button>
+<button onclick="chia()">Chia</button>
+
+<h4> Result:</h4>
+<div id="result"></div>
+
+
+
+</body>
+</html>
+<script>
+  function Cong() {
+    let a = document.getElementById("num1").value ;
+    let b = document.getElementById("num2").value ;
+    let c = Number(a) + Number(b) ;
+    document.getElementById("result").innerHTML = c;
+  }
+
+  function tru() {
+      let a = document.getElementById("num1").value ;
+      let b = document.getElementById("num2").value ;
+      let c = Number(a) - Number(b) ;
+      document.getElementById("result").innerHTML = c;
+  }
+  function nhan() {
+      let a = document.getElementById("num1").value ;
+      let b = document.getElementById("num2").value ;
+      let c = Number(a) * Number(b) ;
+      document.getElementById("result").innerHTML = c;
+  }
+  function chia() {
+      let a = document.getElementById("num1").value ;
+      let b = document.getElementById("num2").value ;
+      let c = Number(a) / Number(b) ;
+      document.getElementById("result").innerHTML = c;
+  }
+</script>
