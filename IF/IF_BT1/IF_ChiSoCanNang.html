@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tính chỉ số chiều cao cân nặng</title>
+</head>
+<body>
+<h3> Chiều cao</h3>
+<input type="text" id="chieuCao" placeholder="Chiều cao (m)">
+<h3> Cân nặng</h3>
+<input type="text" id="canNang" placeholder="Cân nặng (kg) "> <br><br>
+
+<button onclick="ketLuan()">Kết quả</button>
+<p id="bmi"></p>
+</body>
+</html>
+
+<script>
+function ketLuan() {
+  let a = document.getElementById("chieuCao").value;
+  let b = document.getElementById("canNang").value;
+  let c = b/Math.pow(a,2) ;
+  if (c<18.5) {
+    document.getElementById("bmi").innerHTML = "Underweight"
+  } else if (c < 25) {
+    document.getElementById("bmi").innerHTML = "Normal"
+  } else if (c < 30) {
+    document.getElementById("bmi").innerHTML = "OverWeight"
+  } else {
+    document.getElementById("bmi").innerHTML = "Obese"
+  }
+
+}
+
+</script>
