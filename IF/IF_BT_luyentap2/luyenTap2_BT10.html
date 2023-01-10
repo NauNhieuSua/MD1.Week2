@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyên tập 2 _ Bài tập 10</title>
+</head>
+<body>
+
+</body>
+</html>
+
+<script>
+  let soDien = +prompt(" Nhập số điện hàng tháng ")
+  if(soDien>0 && soDien<=50){
+    giaDien = soDien*1678
+    alert("tiền điện: " + giaDien +" đ")
+  }else if(soDien<=100){
+    giaDien= 50*1678 + (soDien-50)*1734
+    alert("tiền điện: " + giaDien +" đ")
+  }else if(soDien<=200){
+    giaDien= 50*1678 + 50*1734 +(soDien-100)*2014
+    alert("tiền điện: " + giaDien +" đ")
+  }else {
+    giaDien= 50*1678 + 50*1734 +100*2014 +(soDien-200)*2536
+    alert("tiền điện: " + giaDien +" đ")
+  }
+
+</script>

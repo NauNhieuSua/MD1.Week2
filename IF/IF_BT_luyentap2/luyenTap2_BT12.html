@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 2 _ Bài tập 12</title>
+</head>
+<body>
+<h3>Tính lãi suất ngân hàng</h3>
+<p>Số tiền gửi ngân hàng: <input type="text" id="tienGui"></p>
+<p>Kỳ hạn(tháng): <input type="text" id="thang"></p>
+<p>Lãi suất(%): <input type="text" id="laiSuat"></p>
+<button onclick="kiemTra()">
+  Kiểm tra</button>
+<p id="ketQuaLai"></p>
+<p id="soTienNhan"></p>
+</body>
+</html>
+<script>
+  function kiemTra() {
+    let soTien = document.getElementById("tienGui").value;
+    let kyHan = document.getElementById("thang").value;
+    let laiSuat =document.getElementById("laiSuat").value;
+    let tongLai = (soTien * kyHan * laiSuat/100)/12;
+    let tongTien = Number(tongLai) + Number(soTien)
+    document.getElementById("ketQuaLai").innerHTML= "Số tiền lãi nhận được:" + tongLai;
+    document.getElementById("soTienNhan").innerHTML="Số tiền lãi nhận được:" + tongTien;
+  }
+</script>
+
+<script>
+
+</script>
