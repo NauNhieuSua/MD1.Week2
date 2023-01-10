@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1 _ bài 3</title>
+</head>
+<body>
+<input type="text" id="soNguyen">
+<button onclick="SoNguyen()">Kiểm tra</button>
+<p id="ketqua"></p>
+</body>
+</html>
+<script>
+  function SoNguyen(){
+    let num1 = document.getElementById("soNguyen").value;
+    if (Number(num1)==0) {
+        document.getElementById("ketqua").innerHTML = "Đây là số: "+ num1;
+    }else if(Number(num1)>0) {
+        document.getElementById("ketqua").innerHTML = "Số " + num1 + " là số dương";
+    }else {
+        document.getElementById("ketqua").innerHTML = "Số " + num1 + " là số âm";
+    }
+
+  }
+</script>

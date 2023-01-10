@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tâp 1 _ Bài 5</title>
+</head>
+<body>
+<h3>Điểm xếp hạng học lực</h3>
+<p>Điểm kiểm tra: <input type="text" id="diemKiemTra"></p>
+<p>Điểm thi giữa kỳ: <input type="text" id="diemGiuaKy"></p>
+<p>Điểm thi cuối kỳ: <input type="text" id="diemCuoiKy"></p>
+
+<Button onclick="diemTrungBinh()"> Tổng kết:</Button>
+
+<p id="ketqua"></p>
+
+
+</body
+</html>
+
+<script>
+    function diemTrungBinh() {
+        let DKT = document.getElementById("diemKiemTra").value
+        let DGK = document.getElementById("diemGiuaKy").value
+        let DCK = document.getElementById("diemCuoiKy").value
+        let DTK = (Number(DKT) + Number(DGK) * 2 + Number(DCK) * 3) / 6
+        if (DTK >= 8) {
+            document.getElementById("ketqua").innerHTML = "Điểm tổng kết: " + DTK + " đạt loại Giỏi";
+        } else if (DTK >= 6.5) {
+            document.getElementById("ketqua").innerHTML = "Điểm tổng kết: " + DTK + " đạt loại Khá";
+        } else if (DTK >= 5) {
+            document.getElementById("ketqua").innerHTML = "Điểm tổng kết: " + DTK + " đạt loại Trung bình";
+        } else {
+            document.getElementById("ketqua").innerHTML = "Điểm tổng kết: " + DTK + " đạt loại Yếu - xem xét ở lại lớp";
+        }
+    }
+</script>

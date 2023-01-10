@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 2 _ Bài 2</title>
+</head>
+<body>
+<h3>Chuyển đổi độ dài</h3>
+<p>Đơn vị đo (m): <input id="m" onchange="chuyenDoiChieuDai()"> </p>
+<table>
+    <tr>
+        <td> Đơn vị đo (ft):</td>
+        <td id="ft"></td>
+    </tr>
+</table>
+</body>
+</html>
+
+<script>
+    function chuyenDoiChieuDai() {
+        let m = document.getElementById("m").value
+        let ft = m*3.2808
+        document.getElementById("ft").innerHTML= ft
+    }
+</script>

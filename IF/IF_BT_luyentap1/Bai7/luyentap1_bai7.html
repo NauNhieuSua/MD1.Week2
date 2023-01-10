@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Luyện tập 1 _ Bài tập 7</title>
+</head>
+<body>
+<h3>Cước phí điện thoại</h3>
+<p> Số phút gọi nội mạng: <input type="text" id="noiMang" placeholder="Số phút gọi nội mạng" onchange="cuocNoiMang()" style="width: 40mm" ></p>
+<p> Số phút gọi ngoại mạng: <input type="text" id="ngoaiMang" placeholder="Số phút gọi ngoại mạng" onchange="cuocNgoaiMang()" style="width: 40mm"></p>
+    <p> Dung lượng 4G:  <input type="text" id="dungLuong" placeholder="Dung lượng"  onchange="dungLuong()" style="width: 40mm"></p> <br>
+
+<table>
+    <tr>
+        <td> Cước phí nội mạng:</td>
+        <td id="cuocNoiMang" ></td>
+    </tr>
+    <tr>
+        <td>Cước phí ngoại mạng:</td>
+        <td id="cuocNgoaiMang" ></td>
+    </tr>
+    <tr>
+        <td>Cước sử dụng 4G:</td>
+        <td id="cuoc4G" ></td>
+    </tr>
+    <tr>
+        <td > <button onclick="tongCuoc()"> Tổng cước:</button> </td>
+        <td id="tongCuoc"></td>
+    </tr>
+
+</table>
+</body>
+</html>
+
+<script>
+    function cuocNoiMang() {
+        let phutNoiMang = document.getElementById("noiMang").value
+        if (phutNoiMang < 60) {
+            document.getElementById("cuocNoiMang").innerHTML = phutNoiMang * 200
+        } else if (phutNoiMang <= 200) {
+            document.getElementById("cuocNoiMang").innerHTML = phutNoiMang * 200 + (phutNoiMang - 60) * 500
+        } else {
+            document.getElementById("cuocNoiMang").innerHTML = phutNoiMang * 200 + (phutNoiMang - 60) * 500 + (phutNoiMang - 200) * 700
+        }
+    }
+
+    function cuocNgoaiMang() {
+        let phutNgoaiMang = document.getElementById("ngoaiMang").value;
+        if (phutNgoaiMang < 60) {
+            ketqua = phutNgoaiMang * 500
+            document.getElementById("cuocNgoaiMang").innerHTML = ketqua
+        } else if (phutNgoaiMang <= 200) {
+            ketqua = phutNgoaiMang* 500 + (phutNgoaiMang- 60) * 700
+            document.getElementById("cuocNgoaiMang").innerHTML = ketqua
+        } else {
+             ketqua =phutNgoaiMang * 500 + (phutNgoaiMang - 60) * 700 + (phutNgoaiMang - 200) * 1000
+            document.getElementById("cuocNgoaiMang").innerHTML = ketqua
+        }
+
+    }
+    function dungLuong() {
+        let soDungLuong = document.getElementById("dungLuong").value
+        if (soDungLuong < 1.5) {
+            document.getElementById("cuoc4G").innerHTML = soDungLuong * 5000
+        } else if (soDungLuong<= 3.5) {
+            document.getElementById("cuoc4G").innerHTML = soDungLuong * 5000 + (soDungLuong - 1.5) * 7000
+        } else {
+            document.getElementById("cuoc4G").innerHTML = soDungLuong * 5000 + (soDungLuong - 1.5) * 7000 + (soDungLuong - 3.5) * 10000
+        }
+    }
+
+    function tongCuoc() {
+        let valueNoiMang = document.getElementById("cuocNoiMang").innerHTML
+        let valueNgoaiMang = document.getElementById("cuocNgoaiMang").innerHTML
+        let valueDungLuong = document.getElementById("cuoc4G").innerHTML
+        // let tongcuoc = valueDungLuong + valueNoiMang + valueNgoaiMang
+
+        let tongcuoc = Number(valueNoiMang) + Number(valueDungLuong) + Number(valueNgoaiMang)
+        document.getElementById("tongCuoc").innerHTML = tongcuoc
+    }
+</script>

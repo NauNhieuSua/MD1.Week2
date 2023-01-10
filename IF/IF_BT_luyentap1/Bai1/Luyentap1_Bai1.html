@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bải tập luyện tập 1</title>
+</head>
+<body>
+<input type="text" id="so1">
+<input type="text" id="so2">
+<Button onclick="kiemtra()">Kiểm tra</Button>
+<p id="ketqua" ></p>
+</body>
+</html>
+<script>
+    function kiemtra() {
+        let num1 = document.getElementById("so1").value;
+        let num2 = document.getElementById("so2").value;
+        if (Number(num1) % Number(num2) == 0) {
+            document.getElementById("ketqua").innerHTML = num1 + " chia hết cho " + num2;
+        } else {
+            document.getElementById("ketqua").innerHTML = num1 + " không chia hết cho " + num2;
+        }
+    }
+</script>
